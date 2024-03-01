@@ -1,35 +1,18 @@
 package com.claseufpso.poo;
 
+import characters.Character;
+
 public class Poo {
 
     public static void main(String[] args) {
         
         Character  homero = new Character( "homero", "inspector nuclear", 33, "Doooo");
         homero.greeting ();
+        System.out.println("tengo " + homero.getAge());
         
-        Character Bart = new Character ("Bartolomeo", "Vago", 10, "Ay caramba");
+        Character Bart = new Character ();
+        Bart.setPhrase("ay caramba");
         Bart.greeting ();
-    }
-   static class Character {
-        String name;
-        String occupation;
-        int age;
-        String phrase;
-
-        public Character(String name, String occupation, int age, String phrase) {
-            this.name = name;
-            this.occupation = occupation;
-            this.age = age;
-            this.phrase = phrase;
-        }
         
-        
-        void greeting (){
-            System.out.println(this.phrase);
-            System.out.println("soy " + this.name);
-            System.out.println("y tengo " + this.age + " años");
-            System.out.println("y valgo vrga en el trabajo de " + this.occupation);
-            System.out.println(" ");
-        }
     }
 }
